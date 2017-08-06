@@ -28,9 +28,10 @@
 \pagestyle{fancy}
 
 \fancyhead{}
+\fancyfoot{} % clear all header and footer fields
 \fancyhead[LE]{\gtfamily\sffamily\bfseries\upshape \leftmark}
 \fancyhead[RO]{\gtfamily\sffamily\bfseries\upshape \rightmark}
-\cfoot{\thepage}
+\fancyfoot[LE,RO]{\thepage}
 
 \renewcommand{\sectionmark}[1]{\markright{\thesection~#1}{}}
 \renewcommand{\chaptermark}[1]{%
@@ -45,17 +46,16 @@
 \fancypagestyle{plainhead}{%
 \fancyhead{}
 \fancyfoot{} % clear all header and footer fields
-\fancyfoot[CE,CO]{\thepage}
+\fancyfoot[LE,RO]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}}
 
-\hypersetup{colorlinks=false}
+\hypersetup{colorlinks=false,hidelinks}
 %%Helveticaを使う
 \renewcommand{\sfdefault}{phv}
 
 \sloppy
 
-\cfoot{\thepage}
 
 \def\cleardoublepage{%
 \clearpage%
@@ -72,13 +72,14 @@
 \setlength{\textwidth}      {130 truemm}
 \setlength{\marginparwidth} {15  truemm}
 \setlength{\marginparsep}   {2   truemm}
-\setlength{\oddsidemargin}  {26  truemm}
-\setlength{\evensidemargin} {26  truemm}
-\setlength{\topmargin}      {10  truemm}
+\setlength{\oddsidemargin}  {1   truemm}
+\setlength{\evensidemargin} {1   truemm}
+\setlength{\topmargin}      {-15 truemm}
 \setlength{\headsep}        {15  truemm}
 \setlength{\headheight}     {5   truemm}
-\setlength{\hoffset}{-1in}
-\setlength{\voffset}{-1in}
+\setlength{\hoffset}{0in}
+\setlength{\voffset}{0in}
+
 \renewcommand{\baselinestretch}{0.96}
 
 \usepackage{fancyvrb}
